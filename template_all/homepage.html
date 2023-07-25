@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA" content="IE=edge">
+    <title>Pose detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container" >
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+              <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+              <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"/>
+              <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+            </svg>
+            <span class="fs-4" href="/goto_home">&nbsp; &nbsp;Movenet with Tensorflow</span>
+          </a>
+
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/goto_home">Home</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown navbar">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Image
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li><a class="dropdown-item" href="/goto_image_singlepose">Singlepose Image</a></li>
+                      <li><a class="dropdown-item" href="/goto_img">Multipose Image</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown navbar">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Video
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li><a class="dropdown-item" href="/goto_video_singlepose">Singlepose Video</a></li>
+                      <li><a class="dropdown-item" href="/goto_video">Multipose Video</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown navbar">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Webcam
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li><a class="dropdown-item" href="/goto_webcam_singlepose">Singlepose Webcam</a></li>
+                      <li><a class="dropdown-item" href="/goto_webcam">Multipose Webcam</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+      </div>
+      
+      <main>
+
+        <section class="py-5 text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="fw-light">MoveNet: Ultra fast and accurate pose detection model</h1>
+              <p class="lead text-body-secondary">MoveNet is an ultra fast and accurate model that detects 17 keypoints of a body. The model is offered on TF Hub with two variants, known as Lightning and Thunder. Lightning is intended for latency-critical applications, while Thunder is intended for applications that require high accuracy. Both models run faster than real time (30+ FPS) on most modern desktops, laptops, and phones, which proves crucial for live fitness, health, and wellness applications.</p>
+              <p>
+                <a href="https://www.tensorflow.org/hub/tutorials/movenet" class="btn btn-primary my-2">Visit</a>
+                
+              </p>
+            </div>
+          </div>
+        </section>
+      
+        <div class="album py-5 bg-body-tertiary">
+          <div class="container">
+      
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="https://1.bp.blogspot.com/-Y7eDVpLvIwA/XsqdIGYwu2I/AAAAAAAABVk/zG4nmk0OR14WEeus4M5rG6DWGsqW_SjAwCK4BGAsYHg/w399-h400/pose_estimation.gif" class="img-fluid">
+                  
+                  <div class="card-body">
+                    <p class="card-text">Pose detection with Image. <br> (Multipose Lightning model and Singlepose Thunder model).</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <form method="post" action="/">
+                          <input type="submit" value="Multipose" name="action3"class="btn btn-sm btn-outline-primary"/>
+                          <input type="submit" value="Singlepose" name="action6"class="btn btn-sm btn-outline-primary"/>
+                        </form>
+                       
+                        
+                      </div>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="https://1.bp.blogspot.com/-25aGTL-RTnY/YJ29jgiiNHI/AAAAAAAAEMM/9qJC_xqlUKo4To9xyumqKmrqKr-vVFXzgCLcBGAsYHQ/s0/three_pane_aligned%2B%25281%2529.gif" class="img-fluid">
+                  <div class="card-body">
+                    <p class="card-text">Pose detection with Video. <br> (Multipose Lightning model and Singlepose Thunder model).</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <form method="post" action="/">
+                          <input type="submit" value="Multipose" name="action4"class="btn btn-sm btn-outline-primary"/>
+                          <input type="submit" value="Singlepose" name="action7"class="btn btn-sm btn-outline-primary"/>
+                        </form>
+                       
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="https://1.bp.blogspot.com/-ULQAErOwRtM/YJ2_N8IeT-I/AAAAAAAAEMU/OiFrIja4uf4HTV_PKVsPPdPozkzZNNc1gCLcBGAsYHQ/s0/final_609dbe3905f85d00a146ec24_883087.gif" class="img-fluid">
+                  <div class="card-body">
+                    <p class="card-text">Pose detection with your Webcam.<br> (Multipose Lightning model and Singlepose Thunder model).</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <form method="post" action="/">
+                          <input type="submit" value="Multipose" name="action5"class="btn btn-sm btn-outline-primary"/>
+                          <input type="submit" value="Singlepose" name="action8"class="btn btn-sm btn-outline-primary"/>
+                        </form>
+                        
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+      
+      </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
+</body>
+</html>
